@@ -19,6 +19,8 @@
 # See https://console.cloud.google.com/gcr/images/k8s-staging-build-image/global/go-runner
 # for a list of available versions. This base image should be updated
 # periodically.
-FROM k8s.gcr.io/build-image/go-runner:v2.3.1-go1.17.2-bullseye.0
+# TODO: not sure how `go-runner` works. So, just use distroless
+FROM gcr.io/distroless/base@sha256:5e3fac1733c75e0e879a9770724e3960610a5cfbbfb5366559fbc334fe86c249
+#FROM k8s.gcr.io/build-image/go-runner:v2.3.1-go1.17.2-bullseye.0
 
 COPY kubemark /kubemark

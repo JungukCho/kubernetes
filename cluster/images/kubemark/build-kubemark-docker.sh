@@ -12,5 +12,5 @@ KUBEMARK_IMAGE_NAME="acnpublic.azurecr.io/kubemark:randomips"
 docker tag staging-k8s.gcr.io/kubemark:latest $KUBEMARK_IMAGE_NAME
 docker push $KUBEMARK_IMAGE_NAME
 
-# clean-up kubemark
+# delete kubemark binary
 rm $KUBEMARK
